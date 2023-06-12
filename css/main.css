@@ -1,6 +1,16 @@
 @import url('reset.css');
 @import url('normalize.css');
-@import url('https://webfontworld.github.io/Cafe24Classictype/Cafe24ClassicType.css');
+@font-face {
+    font-family: 'Cafe24ClassicType';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.ttf') format("truetype");
+    font-display: swap;
+}
 @import url('https://webfontworld.github.io/tway/TwaySky.css');
 
 /* 
