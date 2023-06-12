@@ -36,13 +36,13 @@ header .container{
     display:flex;
     justify-content:space-between;
 }
-header h1{
+header h1 a{
     font-family: 'Cafe24ClassicType'; 
     font-size:42px;
     text-transform:uppercase;
     color:#fff;
     padding:0 20px;
-    border-left:2px solid #fff;
+    height:100%;
     border-right:2px solid #fff;
 }
 header nav .menu{
@@ -50,7 +50,8 @@ header nav .menu{
     justify-content:end;
     align-items:center;
     gap:20px;
-    border-right:2px solid #fff;
+    height:100%;
+    margin-right:20px;
 }
 header nav .menu a{
     font-family: 'Cafe24ClassicType'; 
