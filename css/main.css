@@ -1,3 +1,5 @@
+@import url('reset.css');
+@import url('normalize.css');
 @import url('https://webfontworld.github.io/Cafe24Classictype/Cafe24ClassicType.css');
 @import url('https://webfontworld.github.io/tway/TwaySky.css');
 
@@ -13,6 +15,7 @@ body{
 /* --------------------------------------- HEADER -------------------------------------------- */
 header{
     border-bottom:2px solid #fff;
+    width:100%;
     position:fixed;
     z-index:999;
 }
