@@ -32,7 +32,6 @@ header{
 header .container{
     width:1600px;
     margin:0 auto;
-    padding:20px 0;
     display:flex;
     justify-content:space-between;
 }
@@ -41,7 +40,7 @@ header h1{
     font-size:42px;
     text-transform:uppercase;
     color:#fff;
-    padding:0 20px;
+    padding:20px;
     height:100%;
     border-right:2px solid #fff;
 }
