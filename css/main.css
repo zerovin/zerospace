@@ -71,6 +71,7 @@ main #banner::after{
     bottom:85px;
 }
 main #banner .container{
+    height:100%;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -82,6 +83,7 @@ main #banner .main_tt{
     color:#fff;
     -webkit-text-stroke:1px #000;
     text-align:center;
+    text-transform:uppercase;
 }
 main #banner .main_tt.second{
     color:#E5FF45;
