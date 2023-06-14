@@ -10,15 +10,26 @@ window.addEventListener('scroll',function(){
     }
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
-let banner = gsap.timeline();
-ScrollTrigger.create({
-    animation: banner,
-    trigger: "#banner",
-    start: "top top",
-    end: "70% 100%",
-    scrub: 1,
+gsap.to('#banner',{
+    position:'fixed',
+    scrollTrigger: {
+        trigger: "#banner",
+        start: "top top",
+        pin: true,
+        scrub: true
+    }
 });
-
-banner.to(".main_tt.first", { x: -2000 }, 0)
+gsap.to('.main_tt.first',{
+    x:'0%',duration:0.5,scrollTrigger:{
+    trigger:'#banner',
+    scrub:true,
+    start:'top 20%'
+    }
+});
+gsap.to('.main_tt.second',{
+    x:'0%',duration:0.5,scrollTrigger:{
+    trigger:'#banner',
+    scrub:true,
+    start:'top 20%'
+    }
+});
