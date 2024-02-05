@@ -11,7 +11,6 @@
          url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.ttf') format("truetype");
     font-display: swap;
 }
-/* @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap'); */
 @import url('https://webfontworld.github.io/tway/TwaySky.css');
 
 /* 
@@ -32,12 +31,12 @@ font-family: "Schoolbell";
 }
 
 body{
-    background:url(../img/bg.png) no-repeat center center/cover;
+    background:url(../img/paper_bg.jpg) no-repeat center center/cover;
     height:4300px;
 }
 /* --------------------------------------- HEADER -------------------------------------------- */
 header{
-    border-bottom:2px solid #fff;
+    border-bottom:2px solid #1C1C1C;
     width:100%;
     position:fixed;
     z-index:999;
@@ -54,17 +53,17 @@ header .container{
 }
 header h1{
     height:100%;
-    border-right:2px solid #fff;
+    border-right:2px solid #1C1C1C;
 }
 header.scroll h1{
-    border-left:2px solid #fff;
+    border-left:2px solid #1C1C1C;
     margin-left:-2px;
 }
 header h1 a{
     font-family: 'Cafe24ClassicType'; 
     font-size:42px;
     text-transform:uppercase;
-    color:#fff;
+    color:#1C1C1C;
     display:block;
     padding:20px;
     transition:.5s;
@@ -82,13 +81,13 @@ header nav .menu{
     padding-right:20px;
 }
 header.scroll nav .menu{
-    border-right:2px solid #fff;
+    border-right:2px solid #1C1C1C;
     margin-right:-2px;
 }
 header nav .menu a{
     font-family: 'Cafe24ClassicType'; 
     font-size:24px;
-    color:#fff;
+    color:#1C1C1C;
     transition:.5s;
 }
 header.scroll nav .menu a{
@@ -99,8 +98,8 @@ header.scroll nav .menu a{
 main .container{
     width:1600px;
     margin:0 auto;
-    border-left:2px solid #fff;
-    border-right:2px solid #fff;
+    border-left:2px solid #1C1C1C;
+    border-right:2px solid #1C1C1C;
 }
 
 /* ---------------------------- BANNER -----------------------------*/
@@ -112,7 +111,7 @@ main #banner::after{
     content:'';
     width:100%;
     height:2px;
-    background:#fff;
+    background:#1C1C1C;
     position:absolute;
     left:0;
     bottom:85px;
@@ -124,17 +123,15 @@ main #banner .container{
     align-items:center;
 }
 main #banner .main_tt{
-    /* font-family: 'Cafe24ClassicType';  */
     font-family: "Schoolbell";
     font-size:170px;
     line-height:1.2;
-    color:#fff;
-    /* -webkit-text-stroke:1px #000; */
+    color:#1C1C1C;
     text-align:center;
     text-transform:uppercase;
-    /* transform:translateX(-35%); */
+    transform:translateX(-35%);
 }
 main #banner .main_tt.second{
-    color:#E5FF45;
-    /* transform:translateX(45%); */
+    color:#1C1C1C;
+    transform:translateX(45%);
 }
