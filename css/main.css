@@ -23,7 +23,7 @@ font-family: "Schoolbell";
     width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#fff, #E5FF45);
+    background: linear-gradient(#fff, #1C1C1C);
     border-radius: 100px;
 }
 ::-webkit-scrollbar-track {
