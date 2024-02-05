@@ -1,0 +1,140 @@
+@import url('reset.css');
+@import url('normalize.css');
+@font-face {
+    font-family: 'Cafe24ClassicType';
+    font-weight: normal;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.ttf') format("truetype");
+    font-display: swap;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap'); */
+@import url('https://webfontworld.github.io/tway/TwaySky.css');
+
+/* 
+font-family: 'Cafe24ClassicType'; 
+font-family: 'TwaySky';
+font-family: "Schoolbell";
+*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#fff, #E5FF45);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+body{
+    background:url(../img/bg.png) no-repeat center center/cover;
+    height:4300px;
+}
+/* --------------------------------------- HEADER -------------------------------------------- */
+header{
+    border-bottom:2px solid #fff;
+    width:100%;
+    position:fixed;
+    z-index:999;
+    transition:.5s;
+}
+header.scroll{
+    backdrop-filter: blur(30px);
+}
+header .container{
+    width:1600px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+}
+header h1{
+    height:100%;
+    border-right:2px solid #fff;
+}
+header.scroll h1{
+    border-left:2px solid #fff;
+    margin-left:-2px;
+}
+header h1 a{
+    font-family: 'Cafe24ClassicType'; 
+    font-size:42px;
+    text-transform:uppercase;
+    color:#fff;
+    display:block;
+    padding:20px;
+    transition:.5s;
+}
+header.scroll h1 a{
+    padding:10px 20px;
+    font-size:30px;
+}
+header nav .menu{
+    display:flex;
+    justify-content:end;
+    align-items:center;
+    gap:20px;
+    height:100%;
+    padding-right:20px;
+}
+header.scroll nav .menu{
+    border-right:2px solid #fff;
+    margin-right:-2px;
+}
+header nav .menu a{
+    font-family: 'Cafe24ClassicType'; 
+    font-size:24px;
+    color:#fff;
+    transition:.5s;
+}
+header.scroll nav .menu a{
+    font-size:18px;
+}
+
+/* ----------------------------------------- MAIN ------------------------------------------ */
+main .container{
+    width:1600px;
+    margin:0 auto;
+    border-left:2px solid #fff;
+    border-right:2px solid #fff;
+}
+
+/* ---------------------------- BANNER -----------------------------*/
+main #banner{
+    height:100vh;
+    position:relative;
+}
+main #banner::after{
+    content:'';
+    width:100%;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    left:0;
+    bottom:85px;
+}
+main #banner .container{
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+main #banner .main_tt{
+    /* font-family: 'Cafe24ClassicType';  */
+    font-family: "Schoolbell";
+    font-size:170px;
+    line-height:1.2;
+    color:#fff;
+    /* -webkit-text-stroke:1px #000; */
+    text-align:center;
+    text-transform:uppercase;
+    /* transform:translateX(-35%); */
+}
+main #banner .main_tt.second{
+    color:#E5FF45;
+    /* transform:translateX(45%); */
+}
