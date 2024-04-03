@@ -1,22 +1,10 @@
 @import url('reset.css');
 @import url('normalize.css');
-@font-face {
-    font-family: 'Cafe24ClassicType';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Classictype/Cafe24ClassicType.ttf') format("truetype");
-    font-display: swap;
-}
-@import url('https://webfontworld.github.io/tway/TwaySky.css');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
 /* 
-font-family: 'Cafe24ClassicType'; 
-font-family: 'TwaySky';
-font-family: "Schoolbell";
+font-family: "Montserrat", sans-serif;
+font-family: 'SCoreDream';
 */
 
 ::-webkit-scrollbar {
@@ -29,109 +17,90 @@ font-family: "Schoolbell";
 ::-webkit-scrollbar-track {
     background: #fff;
 }
-
 body{
-    background:url(../img/paper_bg.jpg) no-repeat center center/cover;
-    height:4300px;
+    position:relative;
+    overflow-x:hidden;
+    color:#1C1C1C;
 }
-/* --------------------------------------- HEADER -------------------------------------------- */
+
+/* ------------------------- HEADER ---------------------- */
 header{
-    border-bottom:2px solid #1C1C1C;
-    width:100%;
     position:fixed;
+    top:0; left:0; right:0;
     z-index:999;
-    transition:.5s;
-}
-header.scroll{
-    backdrop-filter: blur(30px);
-}
-header .container{
-    width:1600px;
-    margin:0 auto;
+    padding:20px 50px;
+    font-family: "Montserrat", sans-serif;
     display:flex;
     justify-content:space-between;
 }
 header h1{
-    height:100%;
-    border-right:2px solid #1C1C1C;
-}
-header.scroll h1{
-    border-left:2px solid #1C1C1C;
-    margin-left:-2px;
+    text-transform:uppercase;
+    font-size:42px;
+    font-weight:800;
 }
 header h1 a{
-    font-family: 'Cafe24ClassicType'; 
-    font-size:42px;
-    text-transform:uppercase;
     color:#1C1C1C;
-    display:block;
-    padding:20px;
-    transition:.5s;
 }
-header.scroll h1 a{
-    padding:10px 20px;
-    font-size:30px;
-}
-header nav .menu{
+header .hamburger{
     display:flex;
-    justify-content:end;
-    align-items:center;
-    gap:20px;
-    height:100%;
-    padding-right:20px;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+    cursor:pointer;
 }
-header.scroll nav .menu{
-    border-right:2px solid #1C1C1C;
-    margin-right:-2px;
-}
-header nav .menu a{
-    font-family: 'Cafe24ClassicType'; 
-    font-size:24px;
-    color:#1C1C1C;
-    transition:.5s;
-}
-header.scroll nav .menu a{
-    font-size:18px;
-}
-
-/* ----------------------------------------- MAIN ------------------------------------------ */
-main .container{
-    width:1600px;
-    margin:0 auto;
-    border-left:2px solid #1C1C1C;
-    border-right:2px solid #1C1C1C;
-}
-
-/* ---------------------------- BANNER -----------------------------*/
-main #banner{
-    height:100vh;
-    position:relative;
-}
-main #banner::after{
-    content:'';
-    width:100%;
-    height:2px;
+header .hamburger span{
+    width:30px;
+    height:1px;
     background:#1C1C1C;
-    position:absolute;
-    left:0;
-    bottom:85px;
 }
-main #banner .container{
-    height:100%;
+header .hamburger.open{
+    z-index:9999;
+}
+header .hamburger.open span{
+    background:#fff;
+    transition:.5s;
+}
+header .hamburger.open span:nth-child(1){
+    transform:rotate(-45deg);
+    transform-origin:100% 0;
+    width:32px;
+}
+header .hamburger.open span:nth-child(2){
+    opacity:0;
+}
+header .hamburger.open span:nth-child(3){
+    transform:rotate(45deg);
+    transform-origin:100% 100%;
+    width:32px;
+}
+header aside{
+    position:absolute;
+    top:0;
+    left:100%;
+    transform:translateY(-100%);
+    background:rgba(28,28,28,.8);
+    width:100%;
+    height:100vh;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
+    transition:.5s;
 }
-main #banner .main_tt{
-    font-family: "Schoolbell";
-    font-size:170px;
-    line-height:1.2;
-    color:#1C1C1C;
+header aside.open{
+    left:0;
+    transform:translateY(0);
+}
+header aside ul li{
     text-align:center;
-    text-transform:uppercase;
-    transform:translateX(-35%);
 }
-main #banner .main_tt.second{
-    color:#1C1C1C;
-    transform:translateX(45%);
+header aside ul a{
+    text-transform:uppercase;
+    font-size:70px;
+    font-weight:900;
+    color:#FCFCFC;
+    padding:0 30px;
+}
+header aside ul li + li{
+    margin-top:30px;
 }

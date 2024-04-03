@@ -1,35 +1,40 @@
 //header scroll
-let header = document.querySelector('header');
+let hamburger = $('header .hamburger'),
+    menu = $('header aside');
 
-window.addEventListener('scroll',function(){
-    let scrollAmt = window.scrollY;
-    if(scrollAmt > 0){
-        header.classList.add('scroll');
-    }else if(scrollAmt <= 0){
-        header.classList.remove('scroll');
+hamburger.click(function(){
+    $(this).toggleClass('open');
+    if(!$(this).hasClass('open')){
+        menu.removeClass('open');
+    }else{
+        menu.addClass('open');
     }
+});
+menu.find('a').click(function(){
+    menu.removeClass('open');
+    hamburger.removeClass('open');
 });
 
-gsap.to('#banner',{
-    position:'fixed',
-    scrollTrigger: {
-        trigger: "#banner",
-        start: "top top",
-        pin: true,
-        scrub: true
-    }
-});
-gsap.to('.main_tt.first',{
-    x:'0%',duration:0.5,scrollTrigger:{
-    trigger:'#banner',
-    scrub:true,
-    start:'top 20%'
-    }
-});
-gsap.to('.main_tt.second',{
-    x:'0%',duration:0.5,scrollTrigger:{
-    trigger:'#banner',
-    scrub:true,
-    start:'top 20%'
-    }
-});
+// gsap.to('#banner',{
+//     position:'fixed',
+//     scrollTrigger: {
+//         trigger: "#banner",
+//         start: "top top",
+//         pin: true,
+//         scrub: true
+//     }
+// });
+// gsap.to('.main_tt.first',{
+//     x:'0%',duration:0.5,scrollTrigger:{
+//     trigger:'#banner',
+//     scrub:true,
+//     start:'top 20%'
+//     }
+// });
+// gsap.to('.main_tt.second',{
+//     x:'0%',duration:0.5,scrollTrigger:{
+//     trigger:'#banner',
+//     scrub:true,
+//     start:'top 20%'
+//     }
+// });
