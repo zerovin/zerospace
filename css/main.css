@@ -2,9 +2,11 @@
 @import url('normalize.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 /* 
 font-family: "Montserrat", sans-serif;
 font-family: 'SCoreDream';
+font-family: "Schoolbell", cursive;
 */
 
 ::-webkit-scrollbar {
@@ -100,7 +102,77 @@ header aside ul a{
     font-weight:900;
     color:#FCFCFC;
     padding:0 30px;
+    transition:.3s;
+}
+header aside ul a:hover{
+    color:#1C1C1C;
+    -webkit-text-stroke: 2px #FCFCFC;
 }
 header aside ul li + li{
     margin-top:30px;
+}
+
+/* ------------------------- BANNER ---------------------- */
+#welcome{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ------------------------- ABOUT ---------------------- */
+#about{
+    text-align:center;
+    margin-bottom:200px;
+}
+#about .sec_tt{
+    font-family: "Montserrat", sans-serif;
+    font-size:150px;
+    font-weight:700;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    margin-top:20px;
+    margin-bottom:85px;
+}
+#about .about_list{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    text-align:center;
+    margin-bottom:140px;
+}
+#about .about_list > li{
+    width:560px;
+}
+#about .about_list h3{
+    font-family: "Montserrat", sans-serif;
+    font-size:60px;
+    font-weight:700;
+    text-transform: capitalize;
+    margin-bottom:35px;
+}
+#about .about_list p{
+    font-family: 'SCoreDream';
+    font-size:34px;
+    font-weight:300;
+    line-height:1.4;
+}
+#about .about_list .about_edu > li+li{
+    margin-top:25px;
+}
+#about .photo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#about .photo p{
+    font-family: "Schoolbell", cursive;
+    font-size:50px;
+    letter-spacing:0.3em;
+}
+#about .photo p.name{
+    transform:rotate(90deg) translateY(-300%);
+}
+#about .photo p.birth{
+    transform:rotate(270deg) translateY(-200%);
 }
